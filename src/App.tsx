@@ -39,36 +39,109 @@ function App() {
 
       <main className="max-w-4xl lg:max-w-5xl xl:max-w-6xl mx-auto px-6 lg:px-8 py-16 space-y-24">
         {/* Header/Overview Section */}
-        <section className="space-y-8">
-          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 leading-tight tracking-tight">
-            Groundmist: AT Protocol meets local-first software
-          </h1>
-          <div className="space-y-6 text-lg">
-            <p className="text-gray-700 leading-relaxed">
-              Groundmist is a series of progressive experiments exploring the possibilities enabled by connecting the{" "}
-              <a href="https://atproto.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline decoration-1 underline-offset-2">
-                AT Protocol
-              </a>{" "}
-              and the{" "}
-              <a href="https://inkandswitch.com/essays/local-first/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline decoration-1 underline-offset-2">
-                local-first software
-              </a>{" "}
-              paradigm. Depending on your perspective, the combination created by Groundmist does one of the following (or both):
-            </p>
-            <ul className="list-disc pl-8 space-y-3 text-gray-700">
-              <li>It enables a private, local-first layer for AT Protocol.</li>
-              <li>It enables a distribution, legibility, and composability layer for local-first software.</li>
-            </ul>
-            <p className="text-gray-700 leading-relaxed">
-              Groundmist echoes the design of AT Protocol, which emphasizes user ownership and interoperation, but it applies these ideas and select elements of the protocol to local-first software and data instead of to global public data.
-            </p>
+        <section className="relative">
+          <div className="space-y-16">
+            {/* Title and Core Description */}
+            <div className="space-y-12">
+              <div className="space-y-4">
+                <h1 className="text-5xl sm:text-6xl font-bold text-gray-800 tracking-tight">
+                  Groundmist
+                </h1>
+                <h2 className="text-2xl sm:text-3xl text-gray-500 tracking-wide">
+                  AT Protocol meets local-first software
+                </h2>
+              </div>
+
+              {/* What it is - Core Definition */}
+              <div className="max-w-4xl">
+                <p className="text-xl text-gray-800 leading-relaxed">
+                  Groundmist is a series of progressive experiments exploring the possibilities enabled by connecting the{" "}
+                  <a href="https://atproto.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 no-underline border-b border-blue-300 hover:border-blue-600">
+                    AT Protocol
+                  </a>{" "}
+                  and the{" "}
+                  <a href="https://inkandswitch.com/essays/local-first/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 no-underline border-b border-blue-300 hover:border-blue-600">
+                    local-first software
+                  </a>{" "}
+                  paradigm.
+                </p>
+              </div>
+
+              {/* What it does & How it works */}
+              <div className="grid md:grid-cols-2 gap-12">
+                {/* What it does */}
+                <div className="space-y-6">
+                  <h3 className="text-lg font-semibold text-gray-900">What it enables</h3>
+                  <p className="text-lg text-gray-800 leading-relaxed">
+                    Depending on your perspective, the combination created by Groundmist enables one of the following (or both):
+                  </p>
+                  <ul className="space-y-4 pl-4">
+                    <li className="flex items-start space-x-3 text-lg text-gray-800">
+                      <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-blue-600 mt-2.5" aria-hidden="true" />
+                      <span>A private, local-first layer for AT Protocol</span>
+                    </li>
+                    <li className="flex items-start space-x-3 text-lg text-gray-800">
+                      <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-blue-600 mt-2.5" aria-hidden="true" />
+                      <span>A distribution, legibility, and composability layer for local-first software</span>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* How it works */}
+                <div className="space-y-6">
+                  <h3 className="text-lg font-semibold text-gray-900">How it works</h3>
+                  <p className="text-lg text-gray-800 leading-relaxed">
+                    Groundmist echoes the design of AT Protocol, which emphasizes user ownership and interoperation, but it applies these ideas and select elements of the protocol to local-first software and data instead of to global public data. It uses <a href="https://automerge.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 no-underline border-b border-blue-300 hover:border-blue-600">Automerge</a>, AT Protocol's <a href="https://atproto.com/guides/identity" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 no-underline border-b border-blue-300 hover:border-blue-600">Identity</a> and <a href="https://atproto.com/specs/lexicon" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 no-underline border-b border-blue-300 hover:border-blue-600">Lexicon</a> systems, and a personal sync server built with <a href="https://expressjs.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 no-underline border-b border-blue-300 hover:border-blue-600">Express</a>.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Experiment Links */}
+            <nav className="border-t border-gray-100 pt-10">
+              <h3 className="text-sm font-semibold text-gray-600 uppercase tracking-wider mb-6">
+                Experiments
+              </h3>
+              <div className="grid sm:grid-cols-3 gap-6">
+                <a href="#distribution" className="group">
+                  <div className="space-y-3">
+                    <div className="text-xl font-semibold text-gray-900 group-hover:text-blue-600">
+                      1. Distribution
+                    </div>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      Enable 1-click publishing of local-first data to your atproto PDS, unifying public data with local origins
+                    </p>
+                  </div>
+                </a>
+                <a href="#legibility" className="group">
+                  <div className="space-y-3">
+                    <div className="text-xl font-semibold text-gray-900 group-hover:text-blue-600">
+                      2. Legibility
+                    </div>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      Apply atproto's Lexicon schema system to local-first software to enable flexible private AppView interfaces
+                    </p>
+                  </div>
+                </a>
+                <a href="#composability" className="group">
+                  <div className="space-y-3">
+                    <div className="text-xl font-semibold text-gray-900 group-hover:text-blue-600">
+                      3. Composability
+                    </div>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      Create a unified personal data store for local-first data to simplify data reuse, analogous to a PDS
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </nav>
           </div>
         </section>
 
         {/* Experiments Section */}
         <div className="space-y-20">
           {/* Experiment 1 */}
-          <section className="bg-white rounded-xl shadow-sm border border-gray-100">
+          <section id="distribution" className="bg-white rounded-xl shadow-sm border border-gray-100">
             {/* Concept Section */}
             <div className="p-8 sm:p-10 border-b border-gray-100">
               <div className="grid lg:grid-cols-5 gap-8 lg:gap-12">
@@ -155,7 +228,7 @@ function App() {
           </section>
 
           {/* Experiment 2 */}
-          <section className="bg-white rounded-xl shadow-sm border border-gray-100">
+          <section id="legibility" className="bg-white rounded-xl shadow-sm border border-gray-100">
             {/* Concept Section */}
             <div className="p-8 sm:p-10 border-b border-gray-100">
               <div className="grid lg:grid-cols-5 gap-8 lg:gap-12">
@@ -246,7 +319,7 @@ function App() {
           </section>
 
           {/* Experiment 3 */}
-          <section className="bg-white rounded-xl shadow-sm border border-gray-100">
+          <section id="composability" className="bg-white rounded-xl shadow-sm border border-gray-100">
             {/* Concept Section */}
             <div className="p-8 sm:p-10 border-b border-gray-100">
               <div className="grid lg:grid-cols-5 gap-8 lg:gap-12">
