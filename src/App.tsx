@@ -416,6 +416,57 @@ function App() {
               </div>
             </div>
           </section>
+
+          {/* Future Directions Section */}
+          <section className="bg-white rounded-xl shadow-sm border border-gray-100">
+            {/* Concept Section */}
+            <div className="p-8 sm:p-10 border-b border-gray-100">
+              <div>
+                {/* Concept Content - Now full width */}
+                <div className="space-y-8">
+                  <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">Interesting Future Directions</h2>
+
+                  <div className="space-y-6 text-lg">
+                    <p className="text-gray-700 leading-relaxed">
+                      While these experiments show interesting potential in connecting AT Protocol with local-first software, there are also a number of challenges and opportunities for future exploration and development.
+                    </p>
+                    <ul className="list-disc pl-8 space-y-3 text-gray-700">
+                      <li>Data schemas change over time and needs differ by context (e.g. public vs. private). Ink & Switch has done interesting work in this area with the <a href="https://www.inkandswitch.com/cambria/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline decoration-1 underline-offset-2">Cambria project</a> for "data lenses". It would be interesting to explore a global lens network similar to or built on top of Lexicon's global schema network.</li>
+                      <li>Safely allowing data reuse and composability to enable flexible application interfaces requires sophisticated authorization and granular access control mechanisms. Capability-based authorization projects like <a href="https://github.com/ucan-wg/ucan" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline decoration-1 underline-offset-2">UCAN</a> are interesting to consider.</li>
+                      <li>The personal sync server architecture doesn't support collaboration on its own. One interesting exploration would be to extend AT Protocol's federation model to personal sync servers, enabling selective sharing of local-first data.</li>
+                      <li>Personal data stores of structured local-first data present interesting possibilities for social applications based around private data using cryptographic tools such as Private Set Intersection, similar to or expanding on explorations done by the <a href="https://www.cursive.team/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline decoration-1 underline-offset-2">Cursive team.</a> </li>
+                      <li>AT Protocol provides data verifiability. It would be interesting to explore verifiable change histories for composable local-first data. This could enable users to review the history of which applications changed their data. It could also enable importing data with a verifiable provenance (e.g. a digitally signed photograph), making verifiable changes, and then publishing the modified data alongside a zero knowledge proof of its origin and change history.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Implementation Section */}
+            <div className="p-8 sm:p-10 bg-gray-50 rounded-b-xl space-y-6">
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold text-gray-900">Get Involved</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  If you're interested in contributing to these explorations or have ideas of your own, we'd love to hear from you.
+                </p>
+              </div>
+
+              <div className="flex flex-wrap gap-3">
+                <a href="https://bsky.app/profile/grjte.sh" className="inline-flex items-center px-5 py-2.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                  <svg className="w-5 h-5 mr-2" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 568 501">
+                    <path d="M123.121 33.664C188.241 82.553 258.281 181.68 284 234.873c25.719-53.192 95.759-152.32 160.879-201.21C491.866-1.611 568-28.906 568 57.947c0 17.346-9.945 145.713-15.778 166.555-20.275 72.453-94.155 90.933-159.875 79.748C507.222 323.8 536.444 388.56 473.333 453.32c-119.86 122.992-172.272-30.859-185.702-70.281-2.462-7.227-3.614-10.608-3.631-7.733-.017-2.875-1.169.506-3.631 7.733-13.43 39.422-65.842 193.273-185.702 70.281-63.111-64.76-33.89-129.52 80.986-149.071-65.72 11.185-139.6-7.295-159.875-79.748C9.945 203.659 0 75.291 0 57.946 0-28.906 76.135-1.612 123.121 33.664Z" />
+                  </svg>
+                  Follow on Bluesky
+                </a>
+                <a href="https://github.com/grjte" className="inline-flex items-center px-5 py-2.5 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors">
+                  <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clipRule="evenodd" />
+                  </svg>
+                  Follow on GitHub
+                </a>
+              </div>
+            </div>
+          </section>
         </div>
       </main>
     </div>
