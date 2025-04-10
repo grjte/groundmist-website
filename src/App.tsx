@@ -66,161 +66,267 @@ function App() {
         </section>
 
         {/* Experiments Section */}
-        <div className="space-y-16">
+        <div className="space-y-20">
           {/* Experiment 1 */}
-          <section className="bg-white rounded-xl p-8 sm:p-10 shadow-sm border border-gray-100 space-y-8">
-            <div className="space-y-4">
-              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">Experiment 1: Distribution</h2>
-              <a href="#" className="text-blue-600 hover:text-blue-800 block text-lg group">
-                <span className="inline-flex items-center">
-                  Read more: Exploring AT Protocol as a distribution layer for local-first software
-                  <svg className="w-5 h-5 ml-1 transform transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </span>
-              </a>
-            </div>
-            <div className="space-y-6 text-lg">
-              <p className="text-gray-700 leading-relaxed">
-                This project reuses{" "}
-                <a href="https://atproto.com/guides/identity" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline decoration-1 underline-offset-2">
-                  AT Protocol's identity system
-                </a>{" "}
-                to create a connection between private and public data known only to the user, adding a distribution layer to the local-first software ecosystem with the following benefits:
-              </p>
-              <ul className="list-disc pl-8 space-y-3 text-gray-700">
-                <li>1-click publishing for local-first data</li>
-                <li>data that originates in disparate local-first contexts is unified when published, without manual intervention</li>
-                <li>published local-first data can be displayed and viewed flexibly according to user or viewer preference using atproto AppViews</li>
-              </ul>
-              <div className="pt-2">
-                <div className="flex flex-wrap gap-3">
-                  <a href="https://library.groundmist.xyz" className="inline-flex items-center px-5 py-2.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
-                    Try Groundmist Library
-                  </a>
-                  <a href="https://github.com/grjte/content-library" className="inline-flex items-center px-5 py-2.5 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors">
-                    <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                      <path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clipRule="evenodd" />
-                    </svg>
-                    View Code
-                  </a>
+          <section className="bg-white rounded-xl shadow-sm border border-gray-100">
+            {/* Concept Section */}
+            <div className="p-8 sm:p-10 border-b border-gray-100">
+              <div className="grid lg:grid-cols-5 gap-8 lg:gap-12">
+                {/* Concept Content - Takes up 3 columns on large screens */}
+                <div className="lg:col-span-3 space-y-8">
+                  <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">Experiment 1: Distribution</h2>
+
+                  <div className="space-y-6 text-lg">
+                    <p className="text-gray-700 leading-relaxed">
+                      This project reuses{" "}
+                      <a href="https://atproto.com/guides/identity" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline decoration-1 underline-offset-2">
+                        AT Protocol's identity system
+                      </a>{" "}
+                      to create a connection between private and public data known only to the user, adding a distribution layer to the local-first software ecosystem with the following benefits:
+                    </p>
+                    <ul className="list-disc pl-8 space-y-3 text-gray-700">
+                      <li>1-click publishing for local-first data</li>
+                      <li>data that originates in disparate local-first contexts is unified when published, without manual intervention</li>
+                      <li>published local-first data can be displayed and viewed flexibly according to user or viewer preference using atproto AppViews</li>
+                    </ul>
+                  </div>
+
+                  <div className="flex items-center space-x-6">
+                    <a href="#" className="group inline-flex items-center text-blue-600 hover:text-blue-800">
+                      <span className="inline-flex items-center text-lg font-medium">
+                        Read the full write-up
+                        <svg className="w-5 h-5 ml-1 transform transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+
+                {/* Diagram Preview - Takes up 2 columns on large screens */}
+                <div className="lg:col-span-2">
                   <button
                     onClick={() => openDiagram('/assets/groundmist-distribution.png', 'Distribution Diagram')}
-                    className="inline-flex items-center px-5 py-2.5 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors"
+                    className="w-full group"
                   >
-                    <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                    </svg>
-                    View Diagram
+                    <div className="aspect-[4/3] rounded-lg border border-gray-200 bg-gray-50 overflow-hidden relative hover:border-gray-300 transition-colors">
+                      {/* This would be your diagram preview image */}
+                      <img
+                        src="/assets/groundmist-distribution.png"
+                        alt="Distribution concept diagram preview"
+                        className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity"
+                      />
+                      <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-0 group-hover:bg-opacity-5 transition-colors">
+                        <span className="bg-white/90 text-gray-700 px-4 py-2 rounded-full font-medium shadow-sm flex items-center gap-2">
+                          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                          </svg>
+                          View full diagram
+                        </span>
+                      </div>
+                    </div>
                   </button>
                 </div>
+              </div>
+            </div>
+
+            {/* Implementation Section */}
+            <div className="p-8 sm:p-10 bg-gray-50 rounded-b-xl space-y-6">
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold text-gray-900">Example Project: Groundmist Library</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Groundmist Library is an example application where you can privately curate personal content and selectively publish a subset to your atproto PDS. It demonstrates how local-first data can be seamlessly distributed through the AT Protocol while maintaining privacy and user control.
+                </p>
+              </div>
+
+              <div className="flex flex-wrap gap-3">
+                <a href="https://library.groundmist.xyz" className="inline-flex items-center px-5 py-2.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                  Try Groundmist Library
+                </a>
+                <a href="https://github.com/grjte/content-library" className="inline-flex items-center px-5 py-2.5 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors">
+                  <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clipRule="evenodd" />
+                  </svg>
+                  View Source Code
+                </a>
               </div>
             </div>
           </section>
 
           {/* Experiment 2 */}
-          <section className="bg-white rounded-xl p-8 sm:p-10 shadow-sm border border-gray-100 space-y-8">
-            <div className="space-y-4">
-              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">Experiment 2: Legibility</h2>
-              <a href="#" className="text-blue-600 hover:text-blue-800 block text-lg group">
-                <span className="inline-flex items-center">
-                  Read more: Exploring AT Protocol as a legibility layer for local-first software
-                  <svg className="w-5 h-5 ml-1 transform transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </span>
-              </a>
-            </div>
-            <div className="space-y-6 text-lg">
-              <p className="text-gray-700 leading-relaxed">
-                This project applies{" "}
-                <a href="https://atproto.com/specs/lexicon" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline decoration-1 underline-offset-2">
-                  AT Protocol's Lexicon schema system
-                </a>{" "}
-                to local-first software and data. This adds a legibility layer that enables flexible interfaces for interacting with local-first data, without duplicating data or causing issues with consistency and incompatibility.
-              </p>
-              <ul className="list-disc pl-8 space-y-3 text-gray-700">
-                <li>brings the idea of atproto's{" "}
-                  <a href="https://atproto.com/guides/glossary#app-view" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline decoration-1 underline-offset-2">
-                    AppViews
-                  </a>{" "}
-                  to local-first data
-                </li>
-                <li>local-first data from one application can be read or updated from a different AppView preferred by the user for a specific task or context</li>
-                <li>local-first data from multiple local-first applications can be composed within an entirely new application</li>
-              </ul>
-              <div className="pt-2">
-                <div className="flex flex-wrap gap-3">
-                  <a href="https://notebook.groundmist.xyz" className="inline-flex items-center px-5 py-2.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
-                    Try Groundmist Notebook
-                  </a>
-                  <a href="https://github.com/grjte/groundmist-notebook" className="inline-flex items-center px-5 py-2.5 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors">
-                    <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                      <path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clipRule="evenodd" />
-                    </svg>
-                    View Code
-                  </a>
+          <section className="bg-white rounded-xl shadow-sm border border-gray-100">
+            {/* Concept Section */}
+            <div className="p-8 sm:p-10 border-b border-gray-100">
+              <div className="grid lg:grid-cols-5 gap-8 lg:gap-12">
+                {/* Concept Content */}
+                <div className="lg:col-span-3 space-y-8">
+                  <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">Experiment 2: Legibility</h2>
+
+                  <div className="space-y-6 text-lg">
+                    <p className="text-gray-700 leading-relaxed">
+                      This project applies{" "}
+                      <a href="https://atproto.com/specs/lexicon" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline decoration-1 underline-offset-2">
+                        AT Protocol's Lexicon schema system
+                      </a>{" "}
+                      to local-first software and data. This adds a legibility layer that enables flexible interfaces for interacting with local-first data, without duplicating data or causing issues with consistency and incompatibility.
+                    </p>
+                    <ul className="list-disc pl-8 space-y-3 text-gray-700">
+                      <li>brings the idea of atproto's{" "}
+                        <a href="https://atproto.com/guides/glossary#app-view" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline decoration-1 underline-offset-2">
+                          AppViews
+                        </a>{" "}
+                        to local-first data
+                      </li>
+                      <li>local-first data from one application can be read or updated from a different AppView preferred by the user for a specific task or context</li>
+                      <li>local-first data from multiple local-first applications can be composed within an entirely new application</li>
+                    </ul>
+                  </div>
+
+                  <div className="flex items-center space-x-6">
+                    <a href="#" className="group inline-flex items-center text-blue-600 hover:text-blue-800">
+                      <span className="inline-flex items-center text-lg font-medium">
+                        Read the full write-up
+                        <svg className="w-5 h-5 ml-1 transform transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+
+                {/* Diagram Preview */}
+                <div className="lg:col-span-2">
                   <button
                     onClick={() => openDiagram('/assets/groundmist-legibility.png', 'Legibility Diagram')}
-                    className="inline-flex items-center px-5 py-2.5 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors"
+                    className="w-full group"
                   >
-                    <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                    </svg>
-                    View Diagram
+                    <div className="aspect-[4/3] rounded-lg border border-gray-200 bg-gray-50 overflow-hidden relative hover:border-gray-300 transition-colors">
+                      <img
+                        src="/assets/groundmist-legibility.png"
+                        alt="Legibility concept diagram preview"
+                        className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity"
+                      />
+                      <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-0 group-hover:bg-opacity-5 transition-colors">
+                        <span className="bg-white/90 text-gray-700 px-4 py-2 rounded-full font-medium shadow-sm flex items-center gap-2">
+                          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                          </svg>
+                          View full diagram
+                        </span>
+                      </div>
+                    </div>
                   </button>
                 </div>
+              </div>
+            </div>
+
+            {/* Implementation Section */}
+            <div className="p-8 sm:p-10 bg-gray-50 rounded-b-xl space-y-6">
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold text-gray-900">Example Project: Groundmist Notebook</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Groundmist Notebook is an example application which consists of a local-first collaborative editor for writing and editing markdown documents and an atproto AppView for reading public documents which have been published to atproto. The two applications use the same public Lexicon but are otherwise completely separate.
+                </p>
+              </div>
+
+              <div className="flex flex-wrap gap-3">
+                <a href="https://notebook.groundmist.xyz" className="inline-flex items-center px-5 py-2.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                  Try Groundmist Notebook
+                </a>
+                <a href="https://github.com/grjte/groundmist-notebook" className="inline-flex items-center px-5 py-2.5 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors">
+                  <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clipRule="evenodd" />
+                  </svg>
+                  View Source Code
+                </a>
               </div>
             </div>
           </section>
 
           {/* Experiment 3 */}
-          <section className="bg-white rounded-xl p-8 sm:p-10 shadow-sm border border-gray-100 space-y-8">
-            <div className="space-y-4">
-              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">Experiment 3: Composability</h2>
-              <a href="#" className="text-blue-600 hover:text-blue-800 block text-lg group">
-                <span className="inline-flex items-center">
-                  Read more: Exploring composability for local-first data
-                  <svg className="w-5 h-5 ml-1 transform transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </span>
-              </a>
-            </div>
-            <div className="space-y-6 text-lg">
-              <p className="text-gray-700 leading-relaxed">
-                This experiment explores a lightweight way to create a unified personal data store for local-first data which is analagous to the{" "}
-                <a href="https://atproto.com/guides/glossary#pds-personal-data-server" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline decoration-1 underline-offset-2">
-                  atproto PDS
-                </a>{" "}
-                but private by default. It achieves this by switching from the app-specific sync server architecture common to local-first software to a personal sync server architecture.
-              </p>
-              <ul className="list-disc pl-8 space-y-3 text-gray-700">
-                <li>when a user is logged in with their atproto id, user data is automatically synced to their personal sync server, unifying their local-first data into a private personal data store</li>
-                <li>data on a user's personal sync server is structured, making it discoverable and composable, like data in a user's atproto PDS</li>
-                <li>the local-first data store on the personal sync server is portable, like a user's atproto identity or PDS</li>
-              </ul>
-              <div className="pt-2">
-                <div className="flex flex-wrap gap-3">
-                  <a href="https://sync.groundmist.xyz" className="inline-flex items-center px-5 py-2.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
-                    Try Groundmist Sync
-                  </a>
-                  <a href="https://github.com/grjte/groundmist-sync" className="inline-flex items-center px-5 py-2.5 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors">
-                    <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                      <path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clipRule="evenodd" />
-                    </svg>
-                    View Code
-                  </a>
+          <section className="bg-white rounded-xl shadow-sm border border-gray-100">
+            {/* Concept Section */}
+            <div className="p-8 sm:p-10 border-b border-gray-100">
+              <div className="grid lg:grid-cols-5 gap-8 lg:gap-12">
+                {/* Concept Content */}
+                <div className="lg:col-span-3 space-y-8">
+                  <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">Experiment 3: Composability</h2>
+
+                  <div className="space-y-6 text-lg">
+                    <p className="text-gray-700 leading-relaxed">
+                      This project explores a lightweight way to create a unified personal data store for local-first data that is analagous to the{" "}
+                      <a href="https://atproto.com/guides/glossary#pds-personal-data-server" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline decoration-1 underline-offset-2">
+                        atproto PDS
+                      </a>{" "}
+                      but private by default. It achieves this by switching from the app-specific sync server architecture common to local-first software to a personal sync server architecture (PSS).
+                    </p>
+                    <ul className="list-disc pl-8 space-y-3 text-gray-700">
+                      <li>when logged in with atproto id, local-first app data is automatically synced to the user's PSS, unifying it into a personal data store</li>
+                      <li>PSS data is structured, making it discoverable and composable (with permission), like data in a user's atproto PDS</li>
+                      <li>the local-first data store on the PSS is portable, like a user's atproto identity or PDS</li>
+                    </ul>
+                  </div>
+
+                  <div className="flex items-center space-x-6">
+                    <a href="#" className="group inline-flex items-center text-blue-600 hover:text-blue-800">
+                      <span className="inline-flex items-center text-lg font-medium">
+                        Read the full write-up
+                        <svg className="w-5 h-5 ml-1 transform transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+
+                {/* Diagram Preview */}
+                <div className="lg:col-span-2">
                   <button
                     onClick={() => openDiagram('/assets/groundmist-composability.png', 'Composability Diagram')}
-                    className="inline-flex items-center px-5 py-2.5 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors"
+                    className="w-full group"
                   >
-                    <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                    </svg>
-                    View Diagram
+                    <div className="aspect-[4/3] rounded-lg border border-gray-200 bg-gray-50 overflow-hidden relative hover:border-gray-300 transition-colors">
+                      <img
+                        src="/assets/groundmist-composability.png"
+                        alt="Composability concept diagram preview"
+                        className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity"
+                      />
+                      <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-0 group-hover:bg-opacity-5 transition-colors">
+                        <span className="bg-white/90 text-gray-700 px-4 py-2 rounded-full font-medium shadow-sm flex items-center gap-2">
+                          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                          </svg>
+                          View full diagram
+                        </span>
+                      </div>
+                    </div>
                   </button>
                 </div>
+              </div>
+            </div>
+
+            {/* Implementation Section */}
+            <div className="p-8 sm:p-10 bg-gray-50 rounded-b-xl space-y-6">
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold text-gray-900">Example Project: Groundmist Sync</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Groundmist Sync is a self-hosted personal sync server which is owned by your atproto identity. When you log in to other Groundmist applications (Library or Notebook), data will automatically sync to this server, unifying your local-first data into a personal data store that is analogous to your atproto PDS, but private.
+                </p>
+              </div>
+
+              <div className="flex flex-wrap gap-3">
+                <a href="https://sync.groundmist.xyz" className="inline-flex items-center px-5 py-2.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                  Try Groundmist Sync
+                </a>
+                <a href="https://github.com/grjte/groundmist-sync" className="inline-flex items-center px-5 py-2.5 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors">
+                  <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clipRule="evenodd" />
+                  </svg>
+                  View Source Code
+                </a>
               </div>
             </div>
           </section>
