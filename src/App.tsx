@@ -193,17 +193,16 @@ function App() {
                 {/* Diagram Preview - Takes up 2 columns on large screens */}
                 <div className="lg:col-span-2">
                   <button
-                    onClick={() => openDiagram('/assets/groundmist-distribution.png', 'Distribution Diagram')}
+                    onClick={() => openDiagram('/assets/groundmist-distribution.svg', 'Experiment 1: Distribution')}
                     className="w-full group"
                   >
-                    <div className="aspect-[4/3] rounded-lg border border-gray-200 bg-gray-50 overflow-hidden relative hover:border-gray-300 transition-colors">
-                      {/* This would be your diagram preview image */}
+                    <div className="aspect-[4/3] rounded-lg border border-gray-200 bg-white overflow-hidden relative hover:border-gray-300 transition-colors">
                       <img
-                        src="/assets/groundmist-distribution.png"
+                        src="/assets/groundmist-distribution.svg"
                         alt="Distribution concept diagram preview"
-                        className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity"
+                        className="absolute inset-0 w-full h-full object-contain"
                       />
-                      <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-0 group-hover:bg-opacity-5 transition-colors">
+                      <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/5">
                         <span className="bg-white/90 text-gray-700 px-4 py-2 rounded-full font-medium shadow-sm flex items-center gap-2">
                           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -285,16 +284,16 @@ function App() {
                 {/* Diagram Preview */}
                 <div className="lg:col-span-2">
                   <button
-                    onClick={() => openDiagram('/assets/groundmist-legibility.png', 'Legibility Diagram')}
+                    onClick={() => openDiagram('/assets/groundmist-legibility.svg', 'Experiment 2: Legibility')}
                     className="w-full group"
                   >
-                    <div className="aspect-[4/3] rounded-lg border border-gray-200 bg-gray-50 overflow-hidden relative hover:border-gray-300 transition-colors">
+                    <div className="aspect-[4/3] rounded-lg border border-gray-200 bg-white overflow-hidden relative hover:border-gray-300 transition-colors">
                       <img
-                        src="/assets/groundmist-legibility.png"
+                        src="/assets/groundmist-legibility.svg"
                         alt="Legibility concept diagram preview"
-                        className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity"
+                        className="absolute inset-0 w-full h-full object-contain"
                       />
-                      <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-0 group-hover:bg-opacity-5 transition-colors">
+                      <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/5">
                         <span className="bg-white/90 text-gray-700 px-4 py-2 rounded-full font-medium shadow-sm flex items-center gap-2">
                           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -371,16 +370,16 @@ function App() {
                 {/* Diagram Preview */}
                 <div className="lg:col-span-2">
                   <button
-                    onClick={() => openDiagram('/assets/groundmist-composability.png', 'Composability Diagram')}
+                    onClick={() => openDiagram('/assets/groundmist-composability.svg', 'Experiment 3: Composability')}
                     className="w-full group"
                   >
-                    <div className="aspect-[4/3] rounded-lg border border-gray-200 bg-gray-50 overflow-hidden relative hover:border-gray-300 transition-colors">
+                    <div className="aspect-[4/3] rounded-lg border border-gray-200 bg-white overflow-hidden relative hover:border-gray-300 transition-colors">
                       <img
-                        src="/assets/groundmist-composability.png"
+                        src="/assets/groundmist-composability.svg"
                         alt="Composability concept diagram preview"
-                        className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity"
+                        className="absolute inset-0 w-full h-full object-contain"
                       />
-                      <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-0 group-hover:bg-opacity-5 transition-colors">
+                      <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/5">
                         <span className="bg-white/90 text-gray-700 px-4 py-2 rounded-full font-medium shadow-sm flex items-center gap-2">
                           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -405,7 +404,7 @@ function App() {
               </div>
 
               <div className="flex flex-wrap gap-3">
-                <a href="https://sync.groundmist.xyz" className="inline-flex items-center px-5 py-2.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                <a href="https://github.com/grjte/groundmist-sync?tab=readme-ov-file#groundmist-personal-sync-server" className="inline-flex items-center px-5 py-2.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
                   Try Groundmist Sync
                 </a>
                 <a href="https://github.com/grjte/groundmist-sync" className="inline-flex items-center px-5 py-2.5 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors">
