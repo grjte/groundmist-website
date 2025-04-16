@@ -312,15 +312,15 @@ function App() {
             {/* Implementation Section */}
             <div className="p-8 sm:p-10 bg-gray-50 rounded-b-xl space-y-6">
               <div className="space-y-4">
-                <h3 className="text-xl font-semibold text-gray-900">Example Project: Groundmist Notebook</h3>
+                <h3 className="text-xl font-semibold text-gray-900">Example Project: Groundmist Editor & Notebook</h3>
                 <p className="text-gray-700 leading-relaxed">
-                  Groundmist Notebook is an example application which consists of a local-first collaborative editor for writing and editing markdown documents and an atproto AppView for reading public documents which have been published to atproto. The two applications use the same public Lexicon but are otherwise completely separate.
+                  Groundmist Editor is a local-first collaborative editor for writing and editing markdown documents and then publishing them to atproto. For its data schema, it uses the <a href="https://whtwnd.com" target='_blank' rel='noopener noreferrer' className='text-blue-600 hover:text-blue-800 underline decoration-1 underline-offset-2'>WhiteWind</a> blog entry lexicon (<em>com.whtwnd.blog.entry</em>), which means it offers a private environment for drafting (and publishing) WhiteWind blog posts. It's accompanied by Groundmist Notebook, an alternative AppView for reading published work that uses the <em>com.whtwnd.blog.entry</em> lexicon. It can be used to read any posts published from WhiteWind or Groundmist Editor.
                 </p>
               </div>
 
               <div className="flex flex-wrap gap-3">
                 <a href="https://notebook.groundmist.xyz" className="inline-flex items-center px-5 py-2.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
-                  Try Groundmist Notebook
+                  Try Groundmist Editor & Notebook
                 </a>
                 <a href="https://github.com/grjte/groundmist-notebook" className="inline-flex items-center px-5 py-2.5 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors">
                   <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
