@@ -264,20 +264,21 @@ function App() {
                         </a>{" "}
                         to local-first data
                       </li>
-                      <li>local-first data from one application can be read or updated from a different AppView preferred by the user for a specific task or context</li>
+                      <li>atproto applications can use local-first AppViews for managing private data before it gets published to the protocol</li>
+                      <li>local-first data from one app can be read or updated from a different local-first app preferred by the user for a specific task or context</li>
                       <li>local-first data from multiple local-first applications can be composed within an entirely new application</li>
                     </ul>
                   </div>
 
                   <div className="flex items-center space-x-6">
-                    {/* <a href="#" className="group inline-flex items-center text-blue-600 hover:text-blue-800"> */}
-                    <span className="inline-flex items-center text-lg font-medium">
-                      Stay tuned... The full write-up is coming soon.
-                      {/* <svg className="w-5 h-5 ml-1 transform transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg> */}
-                    </span>
-                    {/* </a> */}
+                    <a href="https://hackmd.io/@grjte/groundmist-legibility" className="group inline-flex items-center text-blue-600 hover:text-blue-800" target="_blank" rel="noreferrer noopener">
+                      <span className="inline-flex items-center text-lg font-medium">
+                        Read the full write-up
+                        <svg className="w-5 h-5 ml-1 transform transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </span>
+                    </a>
                   </div>
                 </div>
 
