@@ -1,42 +1,6 @@
-import { useState } from 'react'
-import { DiagramModal } from './components/DiagramModal'
-
 function App() {
-  const [selectedDiagram, setSelectedDiagram] = useState<{
-    isOpen: boolean;
-    path: string;
-    title: string;
-  }>({
-    isOpen: false,
-    path: '',
-    title: ''
-  });
-
-  const openDiagram = (path: string, title: string) => {
-    setSelectedDiagram({
-      isOpen: true,
-      path,
-      title
-    });
-  };
-
-  const closeDiagram = () => {
-    setSelectedDiagram({
-      isOpen: false,
-      path: '',
-      title: ''
-    });
-  };
-
   return (
     <div className="min-h-screen bg-gray-50">
-      <DiagramModal
-        isOpen={selectedDiagram.isOpen}
-        onClose={closeDiagram}
-        imagePath={selectedDiagram.path}
-        title={selectedDiagram.title}
-      />
-
       {/* Add header with social links */}
       <header className="absolute top-0 right-0 p-6">
         <a
@@ -192,13 +156,15 @@ function App() {
 
                 {/* Diagram Preview - Takes up 2 columns on large screens */}
                 <div className="lg:col-span-2">
-                  <button
-                    onClick={() => openDiagram('/assets/groundmist-distribution.svg', 'Experiment 1: Distribution')}
+                  <a
+                    href="/assets/groundmist-distribution.png"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-full group"
                   >
                     <div className="aspect-[4/3] rounded-lg border border-gray-200 bg-white overflow-hidden relative hover:border-gray-300 transition-colors">
                       <img
-                        src="/assets/groundmist-distribution.svg"
+                        src="/assets/groundmist-distribution.png"
                         alt="Distribution concept diagram preview"
                         className="absolute inset-0 w-full h-full object-contain"
                       />
@@ -212,7 +178,7 @@ function App() {
                         </span>
                       </div>
                     </div>
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -284,13 +250,15 @@ function App() {
 
                 {/* Diagram Preview */}
                 <div className="lg:col-span-2">
-                  <button
-                    onClick={() => openDiagram('/assets/groundmist-legibility.svg', 'Experiment 2: Legibility')}
+                  <a
+                    href="/assets/groundmist-legibility.png"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-full group"
                   >
                     <div className="aspect-[4/3] rounded-lg border border-gray-200 bg-white overflow-hidden relative hover:border-gray-300 transition-colors">
                       <img
-                        src="/assets/groundmist-legibility.svg"
+                        src="/assets/groundmist-legibility.png"
                         alt="Legibility concept diagram preview"
                         className="absolute inset-0 w-full h-full object-contain"
                       />
@@ -304,7 +272,7 @@ function App() {
                         </span>
                       </div>
                     </div>
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -370,13 +338,15 @@ function App() {
 
                 {/* Diagram Preview */}
                 <div className="lg:col-span-2">
-                  <button
-                    onClick={() => openDiagram('/assets/groundmist-composability.svg', 'Experiment 3: Composability')}
+                  <a
+                    href="/assets/groundmist-composability.png"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-full group"
                   >
                     <div className="aspect-[4/3] rounded-lg border border-gray-200 bg-white overflow-hidden relative hover:border-gray-300 transition-colors">
                       <img
-                        src="/assets/groundmist-composability.svg"
+                        src="/assets/groundmist-composability.png"
                         alt="Composability concept diagram preview"
                         className="absolute inset-0 w-full h-full object-contain"
                       />
@@ -390,7 +360,7 @@ function App() {
                         </span>
                       </div>
                     </div>
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
