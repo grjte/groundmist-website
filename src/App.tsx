@@ -49,7 +49,7 @@ function App() {
                     AT Protocol
                   </a>{" "}
                   and the{" "}
-                  <a href="https://inkandswitch.com/essays/local-first/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 no-underline border-b border-blue-300 hover:border-blue-600">
+                  <a href="https://inkandswitch.com/local-first" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 no-underline border-b border-blue-300 hover:border-blue-600">
                     local-first software
                   </a>{" "}
                   paradigm.
