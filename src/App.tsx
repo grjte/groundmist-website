@@ -1,21 +1,32 @@
 function App() {
   return (
     <div className="min-h-screen bg-gray-50">
+      {/* Add BCC logo at the top */}
+      <div className="w-full bg-gray-800 border-b border-gray-700 fixed top-0 z-50">
+        <div className="px-6 lg:px-8 py-4">
+          <img
+            src="/assets/BCC Logo RGB_White.png"
+            alt="BCC Logo"
+            className="h-8 w-auto"
+          />
+        </div>
+      </div>
+
       {/* Add header with social links */}
-      <header className="absolute top-0 right-0 p-6">
+      <header className="fixed top-0 right-0 p-6 z-50">
         <a
           href="https://bsky.app/profile/grjte.sh"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[#0085FF] hover:text-[#0066CC] transition-colors"
+          className="text-white hover:underline"
         >
           <div className="flex items-center gap-2">
-            <svg className="w-5 h-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 568 501"><title>Bluesky butterfly logo</title><path fill="currentColor" d="M123.121 33.664C188.241 82.553 258.281 181.68 284 234.873c25.719-53.192 95.759-152.32 160.879-201.21C491.866-1.611 568-28.906 568 57.947c0 17.346-9.945 145.713-15.778 166.555-20.275 72.453-94.155 90.933-159.875 79.748C507.222 323.8 536.444 388.56 473.333 453.32c-119.86 122.992-172.272-30.859-185.702-70.281-2.462-7.227-3.614-10.608-3.631-7.733-.017-2.875-1.169.506-3.631 7.733-13.43 39.422-65.842 193.273-185.702 70.281-63.111-64.76-33.89-129.52 80.986-149.071-65.72 11.185-139.6-7.295-159.875-79.748C9.945 203.659 0 75.291 0 57.946 0-28.906 76.135-1.612 123.121 33.664Z"></path></svg>See us on Bluesky
+            <svg className="w-5 h-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 568 501"><title>Bluesky butterfly logo</title><path fill="currentColor" d="M123.121 33.664C188.241 82.553 258.281 181.68 284 234.873c25.719-53.192 95.759-152.32 160.879-201.21C491.866-1.611 568-28.906 568 57.947c0 17.346-9.945 145.713-15.778 166.555-20.275 72.453-94.155 90.933-159.875 79.748C507.222 323.8 536.444 388.56 473.333 453.32c-119.86 122.992-172.272-30.859-185.702-70.281-2.462-7.227-3.614-10.608-3.631-7.733-.017-2.875-1.169.506-3.631 7.733-13.43 39.422-65.842 193.273-185.702 70.281-63.111-64.76-33.89-129.52 80.986-149.071-65.72 11.185-139.6-7.295-159.875-79.748C9.945 203.659 0 75.291 0 57.946 0-28.906 76.135-1.612 123.121 33.664Z"></path></svg>Connect on Bluesky
           </div>
         </a>
       </header>
 
-      <main className="max-w-4xl lg:max-w-5xl xl:max-w-6xl mx-auto px-6 lg:px-8 py-16 space-y-24">
+      <main className="max-w-4xl lg:max-w-5xl xl:max-w-6xl mx-auto px-6 lg:px-8 pt-24 pb-16 space-y-24">
         {/* Header/Overview Section */}
         <section className="relative">
           <div className="space-y-16">
@@ -119,7 +130,7 @@ function App() {
         {/* Experiments Section */}
         <div className="space-y-20">
           {/* Experiment 1 */}
-          <section id="distribution" className="bg-white rounded-xl shadow-sm border border-gray-100">
+          <section id="distribution" className="bg-white rounded-xl shadow-sm border border-gray-100 scroll-mt-24">
             {/* Concept Section */}
             <div className="p-8 sm:p-10 border-b border-gray-100">
               <div className="grid lg:grid-cols-5 gap-8 lg:gap-12">
@@ -207,7 +218,7 @@ function App() {
           </section>
 
           {/* Experiment 2 */}
-          <section id="legibility" className="bg-white rounded-xl shadow-sm border border-gray-100">
+          <section id="legibility" className="bg-white rounded-xl shadow-sm border border-gray-100 scroll-mt-24">
             {/* Concept Section */}
             <div className="p-8 sm:p-10 border-b border-gray-100">
               <div className="grid lg:grid-cols-5 gap-8 lg:gap-12">
@@ -301,7 +312,7 @@ function App() {
           </section>
 
           {/* Experiment 3 */}
-          <section id="composability" className="bg-white rounded-xl shadow-sm border border-gray-100">
+          <section id="composability" className="bg-white rounded-xl shadow-sm border border-gray-100 scroll-mt-24">
             {/* Concept Section */}
             <div className="p-8 sm:p-10 border-b border-gray-100">
               <div className="grid lg:grid-cols-5 gap-8 lg:gap-12">
@@ -427,7 +438,7 @@ function App() {
                   <svg className="w-5 h-5 mr-2" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 568 501">
                     <path d="M123.121 33.664C188.241 82.553 258.281 181.68 284 234.873c25.719-53.192 95.759-152.32 160.879-201.21C491.866-1.611 568-28.906 568 57.947c0 17.346-9.945 145.713-15.778 166.555-20.275 72.453-94.155 90.933-159.875 79.748C507.222 323.8 536.444 388.56 473.333 453.32c-119.86 122.992-172.272-30.859-185.702-70.281-2.462-7.227-3.614-10.608-3.631-7.733-.017-2.875-1.169.506-3.631 7.733-13.43 39.422-65.842 193.273-185.702 70.281-63.111-64.76-33.89-129.52 80.986-149.071-65.72 11.185-139.6-7.295-159.875-79.748C9.945 203.659 0 75.291 0 57.946 0-28.906 76.135-1.612 123.121 33.664Z" />
                   </svg>
-                  Follow on Bluesky
+                  Connect on Bluesky
                 </a>
                 <a href="https://github.com/grjte" className="inline-flex items-center px-5 py-2.5 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors">
                   <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
