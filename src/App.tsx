@@ -156,7 +156,7 @@ function App() {
                   </div>
 
                   <div className="flex items-center space-x-6">
-                    <a href="https://hackmd.io/@grjte/groundmist-distribution" className="group inline-flex items-center text-blue-600 hover:text-blue-800" target="_blank" rel="noreferrer noopener">
+                    <a href="https://whtwnd.com/grjte.sh/3lndb5weupc2r" className="group inline-flex items-center text-blue-600 hover:text-blue-800" target="_blank" rel="noreferrer noopener">
                       <span className="inline-flex items-center text-lg font-medium">
                         Read the full write-up
                         <svg className="w-5 h-5 ml-1 transform transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -250,7 +250,7 @@ function App() {
                   </div>
 
                   <div className="flex items-center space-x-6">
-                    <a href="https://hackmd.io/@grjte/groundmist-legibility" className="group inline-flex items-center text-blue-600 hover:text-blue-800" target="_blank" rel="noreferrer noopener">
+                    <a href="https://whtwnd.com/grjte.sh/3lndyhyvqdc2w" className="group inline-flex items-center text-blue-600 hover:text-blue-800" target="_blank" rel="noreferrer noopener">
                       <span className="inline-flex items-center text-lg font-medium">
                         Read the full write-up
                         <svg className="w-5 h-5 ml-1 transform transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -338,7 +338,7 @@ function App() {
                   </div>
 
                   <div className="flex items-center space-x-6">
-                    <a href="https://hackmd.io/@grjte/groundmist-interoperability" className="group inline-flex items-center text-blue-600 hover:text-blue-800" target="_blank" rel="noreferrer noopener">
+                    <a href="https://whtwnd.com/grjte.sh/3lne2va62nc2y" className="group inline-flex items-center text-blue-600 hover:text-blue-800" target="_blank" rel="noreferrer noopener">
                       <span className="inline-flex items-center text-lg font-medium">
                         Read the full write-up
                         <svg className="w-5 h-5 ml-1 transform transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -352,14 +352,14 @@ function App() {
                 {/* Diagram Preview */}
                 <div className="lg:col-span-2">
                   <a
-                    href="/assets/groundmist-composability.png"
+                    href="/assets/groundmist-interoperability.png"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full group"
                   >
                     <div className="aspect-[4/3] rounded-lg border border-gray-200 bg-white overflow-hidden relative hover:border-gray-300 transition-colors">
                       <img
-                        src="/assets/groundmist-composability.png"
+                        src="/assets/groundmist-interoperability.png"
                         alt="Interoperability concept diagram preview"
                         className="absolute inset-0 w-full h-full object-contain"
                       />
