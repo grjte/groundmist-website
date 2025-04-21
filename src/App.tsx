@@ -3,35 +3,29 @@ function App() {
     <div className="min-h-screen bg-gray-50">
       {/* Add BCC logo at the top */}
       <div className="w-full bg-gray-800 border-b border-gray-700 fixed top-0 z-50">
-        <div className="px-6 lg:px-8 py-4">
+        <div className="px-6 lg:px-8 py-4 flex justify-center sm:justify-between items-center">
           <img
             src="/assets/BCC Logo RGB_White.png"
             alt="BCC Logo"
             className="h-8 w-auto"
           />
+          <a
+            href="https://bsky.app/profile/grjte.sh"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white hover:underline hidden sm:flex items-center gap-2"
+          >
+            <svg className="w-5 h-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 568 501"><title>Bluesky butterfly logo</title><path fill="currentColor" d="M123.121 33.664C188.241 82.553 258.281 181.68 284 234.873c25.719-53.192 95.759-152.32 160.879-201.21C491.866-1.611 568-28.906 568 57.947c0 17.346-9.945 145.713-15.778 166.555-20.275 72.453-94.155 90.933-159.875 79.748C507.222 323.8 536.444 388.56 473.333 453.32c-119.86 122.992-172.272-30.859-185.702-70.281-2.462-7.227-3.614-10.608-3.631-7.733-.017-2.875-1.169.506-3.631 7.733-13.43 39.422-65.842 193.273-185.702 70.281-63.111-64.76-33.89-129.52 80.986-149.071-65.72 11.185-139.6-7.295-159.875-79.748C9.945 203.659 0 75.291 0 57.946 0-28.906 76.135-1.612 123.121 33.664Z"></path></svg>Connect on Bluesky
+          </a>
         </div>
       </div>
 
-      {/* Add header with social links */}
-      <header className="fixed top-0 right-0 p-6 z-50">
-        <a
-          href="https://bsky.app/profile/grjte.sh"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-white hover:underline"
-        >
-          <div className="flex items-center gap-2">
-            <svg className="w-5 h-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 568 501"><title>Bluesky butterfly logo</title><path fill="currentColor" d="M123.121 33.664C188.241 82.553 258.281 181.68 284 234.873c25.719-53.192 95.759-152.32 160.879-201.21C491.866-1.611 568-28.906 568 57.947c0 17.346-9.945 145.713-15.778 166.555-20.275 72.453-94.155 90.933-159.875 79.748C507.222 323.8 536.444 388.56 473.333 453.32c-119.86 122.992-172.272-30.859-185.702-70.281-2.462-7.227-3.614-10.608-3.631-7.733-.017-2.875-1.169.506-3.631 7.733-13.43 39.422-65.842 193.273-185.702 70.281-63.111-64.76-33.89-129.52 80.986-149.071-65.72 11.185-139.6-7.295-159.875-79.748C9.945 203.659 0 75.291 0 57.946 0-28.906 76.135-1.612 123.121 33.664Z"></path></svg>Connect on Bluesky
-          </div>
-        </a>
-      </header>
-
-      <main className="max-w-4xl lg:max-w-5xl xl:max-w-6xl mx-auto px-6 lg:px-8 pt-24 pb-16 space-y-24">
+      <main className="max-w-4xl lg:max-w-5xl xl:max-w-6xl mx-auto px-6 lg:px-8 pt-24 pb-16">
         {/* Header/Overview Section */}
         <section className="relative">
           <div className="space-y-16">
             {/* Title and Core Description */}
-            <div className="space-y-12">
+            <div className="space-y-2">
               <div className="space-y-4">
                 <h1 className="text-5xl sm:text-6xl font-bold text-gray-800 tracking-tight">
                   Groundmist
@@ -42,7 +36,7 @@ function App() {
               </div>
 
               {/* What it is - Core Definition */}
-              <div className="max-w-4xl">
+              <div className="max-w-4xl my-12">
                 <p className="text-xl text-gray-800 leading-relaxed">
                   Groundmist is a series of progressive experiments exploring the possibilities enabled by connecting the{" "}
                   <a href="https://atproto.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 no-underline border-b border-blue-300 hover:border-blue-600">
@@ -57,9 +51,9 @@ function App() {
               </div>
 
               {/* What it does & How it works */}
-              <div className="grid md:grid-cols-2 gap-12">
+              <div className="grid md:grid-cols-2 gap-12 mb-10">
                 {/* What it does */}
-                <div className="space-y-6">
+                <div className="space-y-4">
                   <h3 className="text-lg font-semibold text-gray-900">What it enables</h3>
                   <p className="text-lg text-gray-800 leading-relaxed">
                     Depending on your perspective, the combination created by Groundmist enables one of the following (or both):
@@ -71,61 +65,69 @@ function App() {
                     </li>
                     <li className="flex items-start space-x-3 text-lg text-gray-800">
                       <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-blue-600 mt-2.5" aria-hidden="true" />
-                      <span>A distribution, legibility, and composability layer for local-first software</span>
+                      <span>A distribution, legibility, and interoperability layer for local-first software</span>
                     </li>
                   </ul>
                 </div>
 
                 {/* How it works */}
-                <div className="space-y-6">
+                <div className="space-y-4">
                   <h3 className="text-lg font-semibold text-gray-900">How it works</h3>
                   <p className="text-lg text-gray-800 leading-relaxed">
                     Groundmist echoes the design of AT Protocol, which emphasizes user ownership and interoperation, but it applies these ideas and select elements of the protocol to local-first software and data instead of to global public data. It uses <a href="https://automerge.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 no-underline border-b border-blue-300 hover:border-blue-600">Automerge</a>, AT Protocol's <a href="https://atproto.com/guides/identity" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 no-underline border-b border-blue-300 hover:border-blue-600">Identity</a> and <a href="https://atproto.com/specs/lexicon" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 no-underline border-b border-blue-300 hover:border-blue-600">Lexicon</a> systems, and a personal sync server built with <a href="https://expressjs.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 no-underline border-b border-blue-300 hover:border-blue-600">Express</a>.
                   </p>
                 </div>
               </div>
-            </div>
 
-            {/* Experiment Links */}
-            <nav className="border-t border-gray-100 pt-10">
-              <h3 className="text-sm font-semibold text-gray-600 uppercase tracking-wider mb-6">
-                Experiments
-              </h3>
-              <div className="grid sm:grid-cols-3 gap-6">
-                <a href="#distribution" className="group">
-                  <div className="space-y-3">
-                    <div className="text-xl font-semibold text-gray-900 group-hover:text-blue-600">
-                      1. Distribution
+              {/* Experiment Links */}
+              <nav className="border-t border-gray-100 pt-6">
+                <h3 className="text-sm font-semibold text-gray-600 uppercase tracking-wider mb-6">
+                  Experiments
+                </h3>
+                <div className="grid sm:grid-cols-3 gap-6">
+                  <a href="#distribution" className="group">
+                    <div className="space-y-3">
+                      <div className="text-xl font-semibold text-gray-900 group-hover:text-blue-600">
+                        1. Distribution
+                      </div>
+                      <p className="text-gray-600 text-sm leading-relaxed">
+                        Enable 1-click publishing of local-first data to your atproto PDS, unifying public data with local origins
+                      </p>
                     </div>
-                    <p className="text-gray-600 text-sm leading-relaxed">
-                      Enable 1-click publishing of local-first data to your atproto PDS, unifying public data with local origins
-                    </p>
-                  </div>
-                </a>
-                <a href="#legibility" className="group">
-                  <div className="space-y-3">
-                    <div className="text-xl font-semibold text-gray-900 group-hover:text-blue-600">
-                      2. Legibility
+                  </a>
+                  <a href="#legibility" className="group">
+                    <div className="space-y-3">
+                      <div className="text-xl font-semibold text-gray-900 group-hover:text-blue-600">
+                        2. Legibility
+                      </div>
+                      <p className="text-gray-600 text-sm leading-relaxed">
+                        Apply atproto's Lexicon schema system to local-first software to enable flexible private AppView interfaces
+                      </p>
                     </div>
-                    <p className="text-gray-600 text-sm leading-relaxed">
-                      Apply atproto's Lexicon schema system to local-first software to enable flexible private AppView interfaces
-                    </p>
-                  </div>
-                </a>
-                <a href="#composability" className="group">
-                  <div className="space-y-3">
-                    <div className="text-xl font-semibold text-gray-900 group-hover:text-blue-600">
-                      3. Composability
+                  </a>
+                  <a href="#interoperability" className="group">
+                    <div className="space-y-3">
+                      <div className="text-xl font-semibold text-gray-900 group-hover:text-blue-600">
+                        3. Interoperability
+                      </div>
+                      <p className="text-gray-600 text-sm leading-relaxed">
+                        Create a unified personal data store for local-first data to simplify data reuse, analogous to a PDS
+                      </p>
                     </div>
-                    <p className="text-gray-600 text-sm leading-relaxed">
-                      Create a unified personal data store for local-first data to simplify data reuse, analogous to a PDS
-                    </p>
-                  </div>
-                </a>
-              </div>
-            </nav>
+                  </a>
+                </div>
+              </nav>
+            </div>
           </div>
         </section>
+
+        {/* CTA Banner */}
+        <div className="text-center text-lg text-gray-600 my-8">
+          <span>We welcome your feedback: </span>
+          <a href="https://bsky.app/profile/grjte.sh" className="text-blue-600 hover:text-blue-800 hover:underline" target="_blank" rel="noopener noreferrer">@grjte</a>
+          <span> or </span>
+          <a href="mailto:grjte@baincapital.com" className="text-blue-600 hover:text-blue-800 hover:underline">grjte@baincapital.com</a>
+        </div>
 
         {/* Experiments Section */}
         <div className="space-y-20">
@@ -312,13 +314,13 @@ function App() {
           </section>
 
           {/* Experiment 3 */}
-          <section id="composability" className="bg-white rounded-xl shadow-sm border border-gray-100 scroll-mt-24">
+          <section id="interoperability" className="bg-white rounded-xl shadow-sm border border-gray-100 scroll-mt-24">
             {/* Concept Section */}
             <div className="p-8 sm:p-10 border-b border-gray-100">
               <div className="grid lg:grid-cols-5 gap-8 lg:gap-12">
                 {/* Concept Content */}
                 <div className="lg:col-span-3 space-y-8">
-                  <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">Experiment 3: Composability</h2>
+                  <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">Experiment 3: Interoperability & Composability</h2>
 
                   <div className="space-y-6 text-lg">
                     <p className="text-gray-700 leading-relaxed">
@@ -336,14 +338,14 @@ function App() {
                   </div>
 
                   <div className="flex items-center space-x-6">
-                    {/* <a href="#" className="group inline-flex items-center text-blue-600 hover:text-blue-800"> */}
-                    <span className="inline-flex items-center text-lg font-medium">
-                      Stay tuned... The full write-up is coming soon.
-                      {/* <svg className="w-5 h-5 ml-1 transform transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg> */}
-                    </span>
-                    {/* </a> */}
+                    <a href="https://hackmd.io/@grjte/groundmist-interoperability" className="group inline-flex items-center text-blue-600 hover:text-blue-800" target="_blank" rel="noreferrer noopener">
+                      <span className="inline-flex items-center text-lg font-medium">
+                        Read the full write-up
+                        <svg className="w-5 h-5 ml-1 transform transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </span>
+                    </a>
                   </div>
                 </div>
 
@@ -358,7 +360,7 @@ function App() {
                     <div className="aspect-[4/3] rounded-lg border border-gray-200 bg-white overflow-hidden relative hover:border-gray-300 transition-colors">
                       <img
                         src="/assets/groundmist-composability.png"
-                        alt="Composability concept diagram preview"
+                        alt="Interoperability concept diagram preview"
                         className="absolute inset-0 w-full h-full object-contain"
                       />
                       <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/5">
@@ -413,8 +415,8 @@ function App() {
                       While these experiments show interesting potential in connecting AT Protocol with local-first software, there are also a number of challenges and opportunities for future exploration and development.
                     </p>
                     <ul className="list-disc pl-8 space-y-3 text-gray-700">
-                      <li>Data schemas change over time and needs differ by context (e.g. public vs. private). Ink & Switch has done interesting work in this area with the <a href="https://www.inkandswitch.com/cambria/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline decoration-1 underline-offset-2">Cambria project</a> for "data lenses". It would be interesting to explore a global lens network similar to or built on top of Lexicon's global schema network.</li>
-                      <li>Safely allowing data reuse and composability to enable flexible application interfaces requires sophisticated authorization and granular access control mechanisms. Capability-based authorization projects like <a href="https://github.com/ucan-wg/ucan" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline decoration-1 underline-offset-2">UCAN</a> are interesting to consider.</li>
+                      <li>Data schemas change over time and needs differ by context (e.g. public vs. private). Ink & Switch has done interesting work in this area with the <a href="https://www.inkandswitch.com/cambria/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline decoration-1 underline-offset-2">Cambria project</a> for "data lenses". Creating a global lens network on top of Lexicon's global schema network would be a powerful addition to this model, and <a href="https://github.com/lexicon-community/governance/issues/14" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline decoration-1 underline-offset-2">community discussion</a> has recently begun.</li>
+                      <li>Safely allowing data interoperability and composability to enable flexible application interfaces requires sophisticated authorization and granular access control mechanisms. Capability-based authorization projects like <a href="https://www.inkandswitch.com/keyhive/notebook/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline decoration-1 underline-offset-2">Keyhive</a> and <a href="https://github.com/ucan-wg/ucan" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline decoration-1 underline-offset-2">UCAN</a> are interesting to consider.</li>
                       <li>The personal sync server architecture doesn't support collaboration on its own. One interesting exploration would be to extend AT Protocol's federation model to personal sync servers, enabling selective sharing of local-first data.</li>
                       <li>Personal data stores of structured local-first data present interesting possibilities for social applications based around private data using cryptographic tools such as Private Set Intersection, similar to or expanding on explorations done by the <a href="https://www.cursive.team/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline decoration-1 underline-offset-2">Cursive team.</a> </li>
                       <li>AT Protocol provides data verifiability. It would be interesting to explore verifiable change histories for composable local-first data. This could enable users to review the history of which applications changed their data. It could also enable importing data with a verifiable provenance (e.g. a digitally signed photograph), making verifiable changes, and then publishing the modified data alongside a zero knowledge proof of its origin and change history.</li>
@@ -427,9 +429,9 @@ function App() {
             {/* Implementation Section */}
             <div className="p-8 sm:p-10 bg-gray-50 rounded-b-xl space-y-6">
               <div className="space-y-4">
-                <h3 className="text-xl font-semibold text-gray-900">Get Involved</h3>
+                <h3 className="text-xl font-semibold text-gray-900">We welcome your feedback</h3>
                 <p className="text-gray-700 leading-relaxed">
-                  If you're interested in contributing to these explorations or have ideas of your own, we'd love to hear from you.
+                  If you're interested in contributing to these explorations or have ideas of your own, I'd love to hear from you.
                 </p>
               </div>
 
@@ -439,6 +441,12 @@ function App() {
                     <path d="M123.121 33.664C188.241 82.553 258.281 181.68 284 234.873c25.719-53.192 95.759-152.32 160.879-201.21C491.866-1.611 568-28.906 568 57.947c0 17.346-9.945 145.713-15.778 166.555-20.275 72.453-94.155 90.933-159.875 79.748C507.222 323.8 536.444 388.56 473.333 453.32c-119.86 122.992-172.272-30.859-185.702-70.281-2.462-7.227-3.614-10.608-3.631-7.733-.017-2.875-1.169.506-3.631 7.733-13.43 39.422-65.842 193.273-185.702 70.281-63.111-64.76-33.89-129.52 80.986-149.071-65.72 11.185-139.6-7.295-159.875-79.748C9.945 203.659 0 75.291 0 57.946 0-28.906 76.135-1.612 123.121 33.664Z" />
                   </svg>
                   Connect on Bluesky
+                </a>
+                <a href="mailto:grjte@baincapital.com" className="inline-flex items-center px-5 py-2.5 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors">
+                  <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                  Send me an email
                 </a>
                 <a href="https://github.com/grjte" className="inline-flex items-center px-5 py-2.5 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors">
                   <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
